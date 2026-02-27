@@ -1,0 +1,60 @@
+/* * @import "colors/colors.css" */
+
+* {
+    font-family: Hasklug Nerd Font;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+.modules-center {
+    background: #0d0d0d;
+    padding: 6px 12px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+#workspaces,
+#clock,
+#pulseaudio,
+#network,
+#cpu,
+#memory {
+    background-color: #0d0d0d;
+    padding: 0 8px;
+    margin: 0 5px;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+
+#workspaces {
+    background: transparent;
+    padding: 0;
+    margin: 0 10px 0 10px;
+    border: none;
+    box-shadow: none;
+}
+
+#workspaces button {
+    background: transparent;
+    color: #c9a961;
+    padding: 0px 6px;
+    margin: 0 2px;
+    border-radius: 16px;
+    box-shadow: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+    background: linear-gradient(135deg, #59009b 0%, #ff69b4 100%);
+    color: #29c293;
+    transition: all 0.3s ease-in-out;
+}

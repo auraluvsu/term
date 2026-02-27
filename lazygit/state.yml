@@ -1,0 +1,26 @@
+lastupdatecheck: 1772159526
+recentrepos:
+    - /home/auraluvsu/.config/hypr
+    - /home/auraluvsu/.config/nvim
+    - /home/auraluvsu/projects/unc
+    - /home/auraluvsu/projects/cpp
+    - /home/auraluvsu/projects/ml
+    - /home/auraluvsu/projects/nyx
+    - /home/auraluvsu
+    - /home/auraluvsu/projects/ameniye
+    - /home/auraluvsu/projects/learn
+    - /home/auraluvsu/exercism
+    - /home/auraluvsu/projects/homepage
+startuppopupversion: 5
+didshowhunkstaginghint: true
+lastversion: 0.59.0
+customcommandshistory:
+    - q
+    - 'chore: node_modules'
+    - '"chore: package.json and prisma config stuff"'
+    - 'feat: updated product info/fallbacks'
+    - 'feat: create new pages for routing'
+    - 'chore: update frontend package.json'
+    - LazyGit
+    - x
+hidecommandlog: false

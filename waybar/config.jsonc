@@ -1,0 +1,56 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 10,
+    "margin-bottom": 3,
+    "modules-center": [
+        "clock",
+        "hyprland/workspaces",
+        "memory",
+        "pulseaudio"
+    ],
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "10"
+        }
+    },
+    "clock": {
+        "timezone": "UK/London",
+"tooltip-format": "<big>{:%B %d %H:%M}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%d - %H:%M}"
+    },
+    "network": {
+        "format-ethernet": "󰈀 ",
+        "format-disconnected": "󰤠 ",
+        "interval": 5,
+        "tooltip": false
+    },
+    "cpu": {
+        "interval": 1,
+        "format": "  {icon0}{icon1}{icon2}{icon3} {usage:>2}%",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+    },
+    "memory": {
+        "interval": 1,
+        "format": "  {used:0.1f}G/{total:0.1f}G"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", " "]
+        },
+        "on-click": "pavucontrol"
+    }
+}
+
