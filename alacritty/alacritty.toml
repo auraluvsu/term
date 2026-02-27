@@ -1,0 +1,80 @@
+[general]
+import = [
+    "~/.config/alacritty/catppuccin-mocha.toml"
+]
+[bell]
+animation = "EaseOutExpo"
+duration = 0
+[terminal.shell]
+program = "/usr/bin/zsh"
+
+
+
+# [terminal.shell]
+# program = "/usr/bin/tmux"
+# args = ["new-session", "-A", "-s", "main"]
+
+# [colors.bright]
+# black = "0x585b70"
+# blue = "0x89b4fa"
+# cyan = "0x94e2d5"
+# green = "0xa6e3a1"
+# magenta = "0xf5c2e7"
+# red = "0xf38ba8"
+# white = "0xa6adc8"
+# yellow = "0xf9e2af"
+#
+[colors.cursor]
+cursor = "0x00a86b"
+text = "0xff00ff"
+#
+[colors.normal]
+black = "0x000000"
+# blue = "0x89b4fa"
+# c00a86b"0x94e2d5"
+# green = "0xa6e3a1"
+# magenta = "0xf5c2e7"
+# red = "0xf38ba8"
+# white = "0xbac2de"
+# yellow = "0xf9e2af"
+
+[colors.primary]
+background = "0x000000"
+foreground = "0xffffff"
+
+[font]
+normal = { family = "ProggyClean Nerd Font", style = "Regular" }
+italic = { family = "ProggyClean Nerd Font", style = "Regular" }
+bold = { family = "ProggyClean Nerd Font", style = "Regular" }
+size = 20
+
+# [font.font_features]
+# "Hasklug Nerd Font" = ["+liga", "+calt"]
+
+[cursor]
+blink_interval = 10000000
+thickness = 1
+
+[cursor.style]
+blinking = "Off"
+shape = "Beam"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[window]
+blur = false
+decorations = "full"
+dynamic_padding = true
+dynamic_title = true
+opacity = 0.35
+
+[window.padding]
+x = 3
+y = 8
+
+[[keyboard.bindings]]
+key = "A"
+mods = "Alt"
+chars = "\u001ba"
