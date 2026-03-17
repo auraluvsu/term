@@ -16,10 +16,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate',
-    },
+    { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', },
+    { 'stevearc/conform.nvim', opts = {}, },
     {
         "williamboman/mason.nvim",
         build = ":MasonUpdate",
@@ -28,10 +26,7 @@ require("lazy").setup({
         end,
     },
     { 'wakatime/vim-wakatime', lazy = false },
-    {
-        'nvim-lualine/lualine.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons' }
-    },
+    { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
     { 'Shadorain/shadotheme' },
     {"sindrets/diffview.nvim"},
     {
@@ -70,10 +65,7 @@ require("lazy").setup({
             require("mason-lspconfig").setup()
         end,
     },
-    { "rose-pine/neovim", name = "rose-pine" },
-    {
-        'nvim-tree/nvim-web-devicons',
-    },
+    { 'nvim-tree/nvim-web-devicons', },
     {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.8', -- Or branch = '0.1.x'
@@ -90,14 +82,6 @@ require("lazy").setup({
             "saadparwaiz1/cmp_luasnip",
             "L3MON4D3/LuaSnip",
         },
-    },
-    {
-        "jiaoshijie/undotree",
-        dependencies = "nvim-lua/plenary.nvim",
-        config = true,
-        keys = { -- load the plugin only when using it's keybinding:
-            { "<leader>u", "<cmd>lua require('undotree').toggle()<cr>" },
-        }
     },
     {"catppuccin/nvim"},
 })

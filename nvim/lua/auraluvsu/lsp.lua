@@ -78,7 +78,7 @@ vim.lsp.config['lua_ls'] = {
 vim.lsp.config['hyprls'] = {
     cmd = { "hyprls" },
     root_dir = function(fname)
-        return vim.fs.root(fname, { "hyprland.conf" })
+        return vim.fs.root(fname, { "hyprland.conf", "hyprlock.conf", "hyprpaper.conf" })
     end,
     capabilities = cmp_capabilities,
 }
@@ -134,9 +134,16 @@ vim.api.nvim_create_autocmd({ "BufReadPre", "BufNewFile" }, {
     pattern = { "*.ts", "*.tsx", "*.js", "*.jsx" },
     callback = function(args)
         vim.lsp.start(vim.lsp.config["ts_ls"], { bufnr = args.buf })
+        vim.lsp.buf.format({ async = false })
     end,
 })
 
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = { "*.ts", "*.tsx", "*.js", "*.jsx" },
+    callback = function(args)
+        vim.lsp.buf.format({ async = false })
+    end,
+})
 -- C & C++
 vim.api.nvim_create_autocmd({ "BufReadPre", "BufNewFile" }, {
     pattern = { "*.c", "*.cc", "*.cpp", "*.h", "*.hh", "*.hpp" },
