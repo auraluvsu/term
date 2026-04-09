@@ -16,7 +16,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', },
+    { 
+        'nvim-treesitter/nvim-treesitter',
+        branch = "main",
+        run = ':TSUpdate', 
+},
     { 'stevearc/conform.nvim', opts = {}, },
     {
         "williamboman/mason.nvim",

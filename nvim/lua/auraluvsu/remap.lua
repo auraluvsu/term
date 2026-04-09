@@ -48,6 +48,7 @@ set('n', '<leader>lg', function()
         prompt_title = "Live Grep 🔥"
     })
 end, {desc = "Grep"})
+set('n', 'K', vim.lsp.buf.hover, { desc = 'LSP Hover' })
 set('n', 'gd', vim.lsp.buf.definition, {})
 set('n', 'gs', ":LazyGit<CR>", {})
 set("v", "J", ":m '>+1<CR>gv=gv")
@@ -64,13 +65,13 @@ set("n", "<C-k>", "<C-w>k")
 set("n", "<C-l>", "<C-w>l")
 
 local arrow_keys = { "<up>", "<left>", "<down>", "<right>" }
-  for _, key in ipairs(arrow_keys) do
-      set("n", key, function()
-          vim.notify("FUCK YOUUUUUUUUUUUUUUUUUUUUUUU", vim.log.levels.ERROR)
-      end, {
-      noremap = true,
-      silent = true,
-  })
+for _, key in ipairs(arrow_keys) do
+    set("n", key, function()
+        vim.notify("FUCK YOUUUUUUUUUUUUUUUUUUUUUUU", vim.log.levels.ERROR)
+    end, {
+    noremap = true,
+    silent = true,
+})
 end
 
 set("n", "z=", function()

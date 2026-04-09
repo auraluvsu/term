@@ -140,7 +140,7 @@ vim.api.nvim_create_autocmd({ "BufReadPre", "BufNewFile" }, {
 
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = { "*.ts", "*.tsx", "*.js", "*.jsx" },
-    callback = function(args)
+    callback = function()
         vim.lsp.buf.format({ async = false })
     end,
 })
@@ -240,7 +240,7 @@ vim.diagnostic.config({
 })
 
 local signs = {
-    Error = " ",  -- or "󰅚 ", "✘", etc.
+    Error = "󰅚 ",  -- or "󰅚 ", "✘", etc.
     Warn = " ",
     Hint = "󰌵 ",
     Info = " "
